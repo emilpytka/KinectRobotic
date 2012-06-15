@@ -1,0 +1,25 @@
+﻿<Window x:Class="KinectRobotic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="444" Width="734">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="360*" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <Image Name="videoImage" Margin="40" Stretch="Fill" />
+        
+<!--        <StackPanel Margin="30">-->
+<!--            <TextBlock Name="XPositionText" FontSize="50" Text="Position" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" />-->
+<!--            <TextBlock Name="YPositionText" FontSize="50" Text="Position" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" />-->
+<!--        </StackPanel>-->
+            <TextBlock Name="Warnings" FontSize="50" Text="" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Button Content="Start Kinect"  Margin="5" Click="StartKinectClick" />
+            <Button Content="Stop Kinect" Margin="5" Click="StopKinectClick" />
+            <Button Content="Connect Robot" Margin="5" Click="ConnectToRobot" />
+            <Button Content="Disconnect Robot" Margin="5" Click="DisconnectRobot" />
+        </StackPanel>
+        <Image Height="30" HorizontalAlignment="Right" Margin="10" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="30" Source="helpIcon.png" MouseLeftButtonDown="AboutClick"/>
+    </Grid>
+</Window>
