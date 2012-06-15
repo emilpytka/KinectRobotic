@@ -112,12 +112,12 @@ namespace KinectRobotic
                                             select s).FirstOrDefault();
                 if (currentSkeleton != null)
                 {
-                    WykrytyRuch(currentSkeleton);
+                    MoveDetected(currentSkeleton);
                 }
             }
         }
 
-        private void WykrytyRuch(Skeleton currentSkeleton)
+        private void MoveDetected(Skeleton currentSkeleton)
         {
             if (IsRobotReady)
             {
